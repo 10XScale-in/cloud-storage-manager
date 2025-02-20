@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloud-storage-manager"
+version = "0.1.0"
+description = "A cloud storage management library for AWS and GCP."
+readme = "README.md"
+authors = [{ name = "Mutharasu", email = "mutharasu39@gmail.com" }]
+license = { file = "LICENSE" }
+dependencies = [
+    "aioboto3",
+    "google-cloud-storage"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/10XScale-in/cloud-storage-manager"
+Documentation = "https://github.com/10XScale-in/cloud-storage-manager"
+Source = "https://github.com/10XScale-in/cloud-storage-manager"
+
+[tool.setuptools.packages.find]
+where = ["src"]
