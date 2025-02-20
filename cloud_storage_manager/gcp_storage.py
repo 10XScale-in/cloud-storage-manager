@@ -4,8 +4,7 @@ from pathlib import Path
 from google.cloud import storage
 from google.oauth2 import service_account
 
-from src.packages import logger
-
+from . import logger
 from .base_storage import BaseCloudStorage
 from .exceptions import DeleteError, DownloadError, UploadError
 from .storage_schema import StorageConfig

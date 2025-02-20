@@ -5,17 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "cloud-storage-manager"
 version = "0.1.0"
-description = "A simple cloud storage manager for AWS S3 and GCP"
+description = "A unified interface for AWS S3 and Google Cloud Storage operations"
 authors = [{name = "MUTHARASU A", email = "mutharasu39@gmail.com"}]
 license = {file = "LICENSE"}
 readme = "README.md"
 requires-python = ">=3.8"
-dependencies = [
-    "boto3",
-    "google-cloud-storage",
-    "pydantic"
-]
-keywords = ["aws", "s3", "gcp", "cloud storage", "file upload"]
+keywords = ["aws", "s3", "gcp", "cloud storage", "file upload", "async"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -24,8 +19,27 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11"
+    "Programming Language :: Python :: 3.11",
+    "Framework :: AsyncIO",
+    "Topic :: Internet :: File Transfer Protocol (FTP)",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "aioboto3>=11.0.0",
+    "google-cloud-storage>=2.0.0",
+    "pydantic>=2.0.0"
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "mypy", "black", "isort"]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.20.0",
+    "mypy>=1.0.0",
+    "black>=22.0.0",
+    "isort>=5.0.0",
+    "flake8>=6.0.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/10XScale-in/cloud-storage-manager"
+"Bug Tracker" = "https://github.com/10XScale-in/cloud-storage-manager/issues"
