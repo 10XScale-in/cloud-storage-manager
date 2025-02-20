@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cloud-storage-manager"
-version = "0.1.1"
+version = "0.1.2"
 description = "A unified interface for AWS S3 and Google Cloud Storage operations"
 authors = [{name = "MUTHARASU A", email = "mutharasu39@gmail.com"}]
 license = {file = "LICENSE"}
