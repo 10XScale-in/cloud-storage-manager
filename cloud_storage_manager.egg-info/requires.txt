@@ -1,0 +1,9 @@
+boto3
+google-cloud-storage
+pydantic
+
+[dev]
+pytest
+mypy
+black
+isort

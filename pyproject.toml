@@ -5,24 +5,27 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "cloud-storage-manager"
 version = "0.1.0"
-description = "A cloud storage management library for AWS and GCP."
+description = "A simple cloud storage manager for AWS S3 and GCP"
+authors = [{name = "MUTHARASU A", email = "mutharasu39@gmail.com"}]
+license = {file = "LICENSE"}
 readme = "README.md"
-authors = [{ name = "Mutharasu", email = "mutharasu39@gmail.com" }]
-license = { file = "LICENSE" }
+requires-python = ">=3.8"
 dependencies = [
-    "aioboto3",
-    "google-cloud-storage"
+    "boto3",
+    "google-cloud-storage",
+    "pydantic"
 ]
+keywords = ["aws", "s3", "gcp", "cloud storage", "file upload"]
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
 ]
 
-[project.urls]
-Homepage = "https://github.com/10XScale-in/cloud-storage-manager"
-Documentation = "https://github.com/10XScale-in/cloud-storage-manager"
-Source = "https://github.com/10XScale-in/cloud-storage-manager"
-
-[tool.setuptools.packages.find]
-where = ["src"]
+[project.optional-dependencies]
+dev = ["pytest", "mypy", "black", "isort"]

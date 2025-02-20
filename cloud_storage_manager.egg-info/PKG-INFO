@@ -1,0 +1,62 @@
+Metadata-Version: 2.2
+Name: cloud-storage-manager
+Version: 0.1.0
+Summary: A simple cloud storage manager for AWS S3 and GCP
+Home-page: https://github.com/10XScale-in/cloud-storage-manager
+Author: MUTHARASU
+Author-email: MUTHARASU A <mutharasu39@gmail.com>
+License: MIT License  
+        
+        Copyright (c) 2024 10xscale.ai  
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy  
+        of this software and associated documentation files (the “Software”), to deal  
+        in the Software without restriction, including without limitation the rights  
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  
+        copies of the Software, and to permit persons to whom the Software is furnished  
+        to do so, subject to the following conditions:  
+        
+        The above copyright notice and this permission notice shall be included in all  
+        copies or substantial portions of the Software.  
+        
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN  
+        THE SOFTWARE.
+        
+Keywords: aws,s3,gcp,cloud storage,file upload
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: google-cloud-storage
+Requires-Dist: pydantic
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+
+# Cloud Storage Manager
+
+Cloud Storage Manager is a Python package for managing file uploads to AWS S3 and Google Cloud Storage.
+
+## Features
+- Upload files to AWS S3
+- Upload files to Google Cloud Storage
+- Uses Boto3 and Google Cloud SDK
+
+## Installation
+```sh
+pip install cloud-storage-manager
